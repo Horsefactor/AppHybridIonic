@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Notre liste de note !</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let note of notes">
+      <ion-card-header>
+        <ion-card-title>{{note.NoteId}}. {{note.Author}}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{note.Content}}
+      </ion-card-content>
+      <ion-button (click)="editNote(note)" class="btn btn-outline-warning">Editer</ion-button>
+      <ion-button (click)="deleteNote(note)" class="btn btn-outline-danger">Supprimer</ion-button>
+    </ion-card>
+  </ion-list>
+</ion-content>

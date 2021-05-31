@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edite une note !</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label>Auteur</ion-label>
+      <ion-input type="text" [(ngModel)]="note.Author" name="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Contenu</ion-label>
+      <ion-textarea [(ngModel)]="note.Content" name="content"></ion-textarea>
+    </ion-item>
+    <ion-button  expand="block" class="btn btn-outline-danger" type="submit" block>Edite la note</ion-button>
+  </form>
+</ion-content>
